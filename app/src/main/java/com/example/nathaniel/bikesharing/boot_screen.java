@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
+
+
 public class BootScreen extends AppCompatActivity {
 
     @Override
