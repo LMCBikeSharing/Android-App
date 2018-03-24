@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BikeSharing.iml" filepath="$PROJECT_DIR$/BikeSharing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidAppMaster.iml" filepath="$PROJECT_DIR$/AndroidAppMaster.iml" />
+      <module fileurl="file://C:\Users\natha\AndroidStudioProjects\Android-App-master\AndroidAppMaster\BikeSharing.iml" filepath="C:\Users\natha\AndroidStudioProjects\Android-App-master\AndroidAppMaster\BikeSharing.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

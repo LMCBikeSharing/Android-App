@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInApi;
@@ -84,10 +85,12 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
     //handle a valid sign in request
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
+            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             // Signed in successfully, show authenticated UI.
             updateUI(account);
+
+
 
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
@@ -100,8 +103,7 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
 
     //decide when to update the activity to show the next one or not
     private void updateUI(GoogleSignInAccount account){
-        if(account == null){
-
+        if(account==null){
         }
         else{
             run();

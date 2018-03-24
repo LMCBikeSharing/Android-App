@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#c7f9e3"
-    tools:context="com.example.nathaniel.bikesharing.BootScreen"
+    tools:context="com.example.nathaniel.bikesharing.boot_screen"
     android:theme="@style/Theme.AppCompat.NoActionBar">
 
     <ImageView
