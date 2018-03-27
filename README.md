@@ -4,7 +4,7 @@ Check README for pull instructions
 I was able to pull the project in by creating an empty android project
 then go to C:/users/you/AndroidStudioProjects/youremptyproject
 then delete everything in that folder so that its empty
-open android studio into that empty project folder and sign into github in file.settings.versioncontrol.github
+Open android studio into that empty project folder and sign into github in file.settings.versioncontrol.github
 then go to the top of the main view select VCS on the bar
 then click create git repository, set the empty project folder as the repository
 go to your command prompt and cd to that directory
