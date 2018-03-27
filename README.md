@@ -14,7 +14,7 @@ syntax errors
 You should have a working pulled repository
 to commit and then push you need to create a remote repository in the command prompt(follow git instructions)
 
-***or if you have already signed into github in android studio, create a new project in the bootup screen using github
+***Or if you have already signed into github in android studio, create a new project in the bootup screen using github
 then import it with the same address as above.
 Good luck!! text Nat at 607-591-9798 for any questions
 
