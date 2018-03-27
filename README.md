@@ -16,6 +16,6 @@ to commit and then push you need to create a remote repository in the command pr
 
 ***or if you have already signed into github in android studio, create a new project in the bootup screen using github
 then import it with the same address as above.
-good luck!! text Nat at 607-591-9798 for any questions
+Good luck!! text Nat at 607-591-9798 for any questions
 
 check xml
