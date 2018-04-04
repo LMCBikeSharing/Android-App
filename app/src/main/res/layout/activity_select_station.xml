@@ -38,6 +38,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:menu="@menu/drawer_view"
+        android:background="@color/colorAccent"
         >
 
     </android.support.design.widget.NavigationView>

@@ -1,8 +1,14 @@
 package com.example.nathaniel.bikesharing;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
@@ -13,6 +19,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -99,9 +106,41 @@ public class select_station extends FragmentActivity implements OnMapReadyCallba
 
         // Add a marker in Sydney and move the camera
         LatLng lemoyne = new LatLng(43.0497, -76.0855);
+        LatLng station_1 = new LatLng(43.0487734, -76.0875042);
+        LatLng station_2 = new LatLng(43.0467958, -76.0910839);
+        LatLng station_3 = new LatLng(43.0468909, -76.0858275);
+        LatLng station_4 = new LatLng(43.0498038, -76.0902384);
+        LatLng station_5 = new LatLng(43.0495897, -76.0853903);
+        //add marker in lemoyne and then move to it and set camera zoom
         mMap.addMarker(new MarkerOptions().position(lemoyne).title("Marker in lemoyne"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(lemoyne));
         mMap.setBuildingsEnabled(true);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lemoyne, 17));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lemoyne, 15));
+        //add all the stations one by one, can be more compact if you add them into an array and loop
+        mMap.addMarker(new MarkerOptions().position(station_1).title("Station 1")
+                .icon(BitmapDescriptorFactory.fromBitmap(iconchooser())));
+        mMap.addMarker(new MarkerOptions().position(station_2).title("Station 2")
+                .icon(BitmapDescriptorFactory.fromBitmap(iconchooser())));
+        mMap.addMarker(new MarkerOptions().position(station_3).title("Station 3")
+                .icon(BitmapDescriptorFactory.fromBitmap(iconchooser())));
+        mMap.addMarker(new MarkerOptions().position(station_4).title("Station 4")
+                .icon(BitmapDescriptorFactory.fromBitmap(iconchooser())));
+        mMap.addMarker(new MarkerOptions().position(station_5).title("Station 5")
+                .icon(BitmapDescriptorFactory.fromBitmap(iconchooser())));
+    }
+    //class for returning a Bitmap of a chosen drawable object, in this case the bike station
+    private Bitmap iconchooser(){
+        Bitmap choice;
+        choice = getBitmap(this,R.drawable.bikestation);
+        return choice;
+    }
+    //converts a drawable into a bitmap object and then returns it or an error
+    public Bitmap getBitmap(Context context, int drawableId) {
+        Drawable drawable = ContextCompat.getDrawable(context, drawableId);
+        if (drawable instanceof BitmapDrawable) {
+            return BitmapFactory.decodeResource(context.getResources(), drawableId);
+        }  else {
+            throw new IllegalArgumentException("unsupported drawable type");
+        }
     }
 }

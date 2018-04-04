@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5eedea"
+    android:background="@color/colorPrimary"
     tools:context="com.example.nathaniel.bikesharing.boot_screen"
     android:theme="@style/Theme.AppCompat.NoActionBar">
 
@@ -16,7 +16,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="boot screen"
+        android:contentDescription="@string/boot_Screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Bike Sharing</string>
     <string name="title_activity_select_station">Map</string>
+    <string name="boot_Screen">boot screen</string>
 </resources>
