@@ -19,8 +19,10 @@ import com.google.android.gms.tasks.Task;
 
 public class google_sign_in extends AppCompatActivity implements View.OnClickListener {
     private GoogleSignInClient mGoogleSignInClient;
+    //integer to compare with for the user validation
     int RC_SIGN_IN = 1;
-    @Override
+
+    @Override//basically the constructor
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_sign_in);
@@ -44,7 +46,7 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
 
     //on activity launching
     protected void onStart() {
-        super.onStart();
+        super.onStart();//set the method as a child of the current activity
 
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
@@ -91,7 +93,7 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
             updateUI(account);
 
 
-
+            //execute the code if an ApiException is displayed
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
@@ -117,7 +119,7 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
         google_sign_in.this.finish();
     }
 
-    //set the next activity to be the sign in activity
+    //set the next activity to be the sign in activity**not finished setting up**
     public void dont_run(){
         Intent mainIntent = new Intent(google_sign_in.this,google_sign_in.class);
         google_sign_in.this.startActivity(mainIntent);
@@ -126,7 +128,7 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
 
 
     @Override
-    //class dependency
+    //class dependency, allows code to be executed when the pointer is changed
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
