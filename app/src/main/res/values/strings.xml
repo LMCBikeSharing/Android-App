@@ -2,4 +2,6 @@
     <string name="app_name">Bike Sharing</string>
     <string name="title_activity_select_station">Map</string>
     <string name="boot_Screen">boot screen</string>
+    <string name="and_symbol"><![CDATA[&]]></string>
+    <string name="free_of_charge">Free of Charge!</string>
 </resources>
