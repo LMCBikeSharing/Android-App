@@ -2,6 +2,7 @@ package com.example.nathaniel.bikesharing;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class google_sign_in extends AppCompatActivity implements View.OnClickListener {
@@ -131,6 +133,17 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
     //class dependency, allows code to be executed when the pointer is changed
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    //revoke access when the user wants to exit from their google account
+    public void revokeAccess() {
+        mGoogleSignInClient.revokeAccess()
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        // ...
+                    }
+                });
     }
 
 

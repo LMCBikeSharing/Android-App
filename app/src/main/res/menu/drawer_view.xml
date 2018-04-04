@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccent">
     <group android:checkableBehavior="single">
-
-
+        <item
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:title="@string/home"
+            android:id="home"/>
+        <item
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:title="@string/report_issue"
+            android:id="report_issue"/>
+        <item android:title="@string/settings"
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:id="settings"/>
+        <item android:title="@string/help"
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:id="help"/>
+        <item android:title="@string/feedback"
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:id="feedback"/>
+        <item android:title="@string/creators"
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:id="creators"/>
+        <item android:title="@string/sign_out"
+            android:icon="?attr/selectableItemBackgroundBorderless"
+            android:id="sign_out"/>
     </group>
 </menu>

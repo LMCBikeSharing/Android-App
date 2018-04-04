@@ -39,7 +39,7 @@
         android:fitsSystemWindows="true"
         app:menu="@menu/drawer_view"
         android:background="@color/colorAccent"
-        >
+        app:headerLayout="@layout/header">
 
     </android.support.design.widget.NavigationView>
 
