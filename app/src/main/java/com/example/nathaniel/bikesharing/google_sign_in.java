@@ -118,14 +118,14 @@ public class google_sign_in extends AppCompatActivity implements View.OnClickLis
     public void run(){
         Intent mainIntent = new Intent(google_sign_in.this,select_station.class);
         google_sign_in.this.startActivity(mainIntent);
-        google_sign_in.this.finish();
+
     }
 
     //set the next activity to be the sign in activity**not finished setting up**
     public void dont_run(){
         Intent mainIntent = new Intent(google_sign_in.this,google_sign_in.class);
         google_sign_in.this.startActivity(mainIntent);
-        google_sign_in.this.finish();
+
     }
 
 

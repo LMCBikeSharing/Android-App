@@ -38,7 +38,8 @@
 
         <activity
             android:name=".select_station"
-            android:label="@string/title_activity_select_station"/>
+            android:label="@string/title_activity_select_station" />
+        <activity android:name=".report_issue"></activity>
     </application>
 
 </manifest>

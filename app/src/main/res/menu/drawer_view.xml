@@ -6,25 +6,25 @@
         <item
             android:icon="?attr/selectableItemBackgroundBorderless"
             android:title="@string/home"
-            android:id="home"/>
+            android:id="@id/home"/>
         <item
             android:icon="?attr/selectableItemBackgroundBorderless"
             android:title="@string/report_issue"
-            android:id="report_issue"/>
+            android:id="@id/report_issue"/>
         <item android:title="@string/settings"
             android:icon="?attr/selectableItemBackgroundBorderless"
-            android:id="settings"/>
+            android:id="@id/settings"/>
         <item android:title="@string/help"
             android:icon="?attr/selectableItemBackgroundBorderless"
-            android:id="help"/>
+            android:id="@id/help"/>
         <item android:title="@string/feedback"
             android:icon="?attr/selectableItemBackgroundBorderless"
-            android:id="feedback"/>
+            android:id="@id/feedback"/>
         <item android:title="@string/creators"
             android:icon="?attr/selectableItemBackgroundBorderless"
-            android:id="creators"/>
+            android:id="@id/creators"/>
         <item android:title="@string/sign_out"
             android:icon="?attr/selectableItemBackgroundBorderless"
-            android:id="sign_out"/>
+            android:id="@id/sign_out"/>
     </group>
 </menu>

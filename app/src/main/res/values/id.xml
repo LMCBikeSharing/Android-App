@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <id name="home">Home</id>
+    <id name="report_issue">Report Issue</id>
+    <id name="settings">Settings</id>
+    <id name="help">Help</id>
+    <id name="feedback">Feedback</id>
+    <id name="creators">Creators</id>
+    <id name="sign_out">Sign Out</id>
+</resources>

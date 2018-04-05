@@ -7,5 +7,10 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="NavigationDrawerStyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">20sp</item><!-- text size in menu-->
+        <item name="android:listPreferredItemHeightSmall">70dp</item><!-- item size in menu-->
+        <item name="listPreferredItemHeightSmall">70dp</item><!-- item size in menu-->
+    </style>
 
 </resources>

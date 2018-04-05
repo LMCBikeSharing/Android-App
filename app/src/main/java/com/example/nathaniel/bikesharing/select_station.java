@@ -1,10 +1,13 @@
 package com.example.nathaniel.bikesharing;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -29,6 +32,7 @@ public class select_station extends FragmentActivity implements OnMapReadyCallba
     private GoogleMap mMap;
     //slide out hamburger menu variable declaration
     private DrawerLayout mDrawerLayout;
+    private static final int REQUEST_APP_SETTINGS = 168;
 
     @Override//Basically the constructor
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,14 +88,30 @@ public class select_station extends FragmentActivity implements OnMapReadyCallba
                         menuItem.setChecked(true);
                         // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
-
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here
-
-                        return true;
+                        switch (menuItem.getItemId()) {
+                            case R.id.report_issue:
+                                Intent mainIntent = new Intent(select_station.this, report_issue.class);
+                                select_station.this.startActivity(mainIntent);
+                                return true;
+                            case R.id.settings:
+                                goToSettings();
+                                return true;
+                            default:
+                                return false;
+                        }
                     }
                 });
     }
+    //allows the app to go to the apps settings based on its package name on the device
+    private void goToSettings() {
+        Intent myAppSettings = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
+        myAppSettings.addCategory(Intent.CATEGORY_DEFAULT);
+        myAppSettings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivityForResult(myAppSettings, REQUEST_APP_SETTINGS);
+    }
+
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -113,10 +133,11 @@ public class select_station extends FragmentActivity implements OnMapReadyCallba
         LatLng station_4 = new LatLng(43.0498038, -76.0902384);
         LatLng station_5 = new LatLng(43.0495897, -76.0853903);
         //add marker in lemoyne and then move to it and set camera zoom
-        mMap.addMarker(new MarkerOptions().position(lemoyne).title("Marker in lemoyne"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(lemoyne));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(station_1));
         mMap.setBuildingsEnabled(true);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lemoyne, 15));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(station_1, 16));
+        mMap.setMaxZoomPreference(16);
+        mMap.setMinZoomPreference(15);
         //add all the stations one by one, can be more compact if you add them into an array and loop
         mMap.addMarker(new MarkerOptions().position(station_1).title("Station 1")
                 .icon(BitmapDescriptorFactory.fromBitmap(iconchooser())));
