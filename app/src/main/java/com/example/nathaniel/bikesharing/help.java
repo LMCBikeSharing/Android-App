@@ -12,16 +12,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class report_issue extends AppCompatActivity {
+public class help extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
-
     private static final int REQUEST_APP_SETTINGS = 168;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report_issue);
+        setContentView(R.layout.activity_help);
 
         //define the hamburger menu as the drawer in the XML
         mDrawerLayout = findViewById(R.id.drawer_layout);
@@ -49,15 +48,15 @@ public class report_issue extends AppCompatActivity {
                         // For example, swap UI fragments here
                         switch (menuItem.getItemId()) {
                             case R.id.home:
-                                Intent mainIntent = new Intent(report_issue.this, select_station.class);
-                                report_issue.this.startActivity(mainIntent);
+                                Intent mainIntent = new Intent(help.this, select_station.class);
+                                help.this.startActivity(mainIntent);
                                 return true;
                             case R.id.settings:
                                 goToSettings();
                                 return true;
-                            case R.id.help:
-                                mainIntent = new Intent(report_issue.this, help.class);
-                                report_issue.this.startActivity(mainIntent);
+                            case R.id.report_issue:
+                                mainIntent = new Intent(help.this, report_issue.class);
+                                help.this.startActivity(mainIntent);
                                 return true;
                             default:
                                 return false;
@@ -65,6 +64,7 @@ public class report_issue extends AppCompatActivity {
                     }
                 });
     }
+
     //allows the app to go to the apps settings based on its package name on the device
     private void goToSettings() {
         Intent myAppSettings = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));

@@ -98,6 +98,10 @@ public class select_station extends FragmentActivity implements OnMapReadyCallba
                             case R.id.settings:
                                 goToSettings();
                                 return true;
+                            case R.id.help:
+                                mainIntent = new Intent(select_station.this, help.class);
+                                select_station.this.startActivity(mainIntent);
+                                return true;
                             default:
                                 return false;
                         }
